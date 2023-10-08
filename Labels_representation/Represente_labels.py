@@ -5,16 +5,16 @@ def represent_labels(rows, columns, path):
     label_names = ['Apples', 'Bananas', 'Bread', 'Carrot', 'Cheese',
                    'Cucumbers', 'Eggs', 'Meat', 'Milk', 'Sausages', 'Tomatoes']
     labels = [get_label_photos(label_names[i], columns, path) for i in range(rows)]
-    f, axarr = plt.subplots(rows, columns, figsize=(3, 12), sharex=True, sharey=True)
+    k = 4
+    f, axarr = plt.subplots(rows, columns, figsize=(3 * k, 12 * k), sharex=True, sharey=True)
     f.subplots_adjust(hspace=0.5)
     for i in range(rows * columns):
         axarr[i // columns, i % columns].imshow(labels[i // columns][i % columns])
-
         # Add row label as title
         if i % columns == 0:
-            axarr[i // columns, i % columns].set_title(label_names[i // 3])
+            axarr[i // columns, i % columns].set_title(label_names[i // 3], fontsize=60)
         axarr[i // columns, i % columns].axis('off')  # Remove the axes
-    plt.savefig("labels.png")
+    plt.savefig("labels.png", dpi=400)
 
 
 def get_label_photos(label, col, path):
