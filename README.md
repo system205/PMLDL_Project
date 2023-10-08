@@ -17,3 +17,7 @@ Targeted labels (as the most common bought items):
 - Meat
 - Sausages
 - Cheese
+
+
+## Examples
+![labels](.\Labels_representation\labels.png)
