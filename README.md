@@ -1,8 +1,10 @@
 # Practical Machine Learning and Deep Learning course project description
-In this repo we store our collected images, train and test different computer vision models, specifically of YOLO's family, on our grocery object detection task.
+
+In this repo we store our collected images from local supermarkets Magnit and Pyaterochka. Also, we train and test different YOLO models on grocery object detection task.
 
 
-# Dataset
+## Dataset
+
 Custom Grocery dataset (items from local Russian supermarkets)
 
 Targeted labels (as the most common bought items):
@@ -18,6 +20,9 @@ Targeted labels (as the most common bought items):
 - Sausages
 - Cheese
 
+## How to use
+
+Follow our telegram bot's [reporistory](https://github.com/system205/GroceryObjectDetectionTelegramBot). Check the instructions there. In short, you need to run docker compose file with <```docker-compose up```> command
 
 ## Examples
 ![labels](.\Labels_representation\labels.png)
