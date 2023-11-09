@@ -25,4 +25,4 @@ Targeted labels (as the most common bought items):
 Follow our telegram bot's [reporistory](https://github.com/system205/GroceryObjectDetectionTelegramBot). Check the instructions there. In short, you need to run docker compose file with <```docker-compose up```> command
 
 ## Examples
-![labels](.\Labels_representation\labels.png)
+![labels](Labels_representation/labels.png)
