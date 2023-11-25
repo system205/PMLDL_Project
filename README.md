@@ -1,12 +1,31 @@
 # Practical Machine Learning and Deep Learning course project
 
+## Authors
+
+* Arsen Mutalpov 
+* Gleb Kirillov
+* Ruslan Kudinov
+
+## Table of Contents
+
+* [Project description](#project-description)
+* [Demo](#demo)
+* [Dataset](#dataset)
+* [Repository structure](#repository-structure)
+* [Results](#results)
+  * [F1/Recal/Precision](#visuals)
+  * [Training metrics](#training-and-validation-results)
+  * [Predictions example](#predictions)
+* [How to use](#how-to-use)
+* [Deployment](#project-deployment)
+
 ## Project description
 
-In our project we are trying to solve the grocery objects detection problem. For this 
-purpose we created our own [**dataset**](#dataset) with images of different grocery products from local
-supermarkets Magnit and Pyaterochka. Furthermore, we used this [**custom dataset**](#dataset) to finetune
-different **YOLO models**.
+In our project we are trying to solve the grocery objects detection problem. For this purpose we created our own [**dataset**](#dataset) with images of different grocery products from local supermarkets Magnit and Pyaterochka. Furthermore, we used this [**custom dataset**](#dataset) to finetune different **YOLO models**.
 
+## Demo
+
+![demo](demo.gif)
 
 ## Dataset
 
@@ -36,7 +55,7 @@ This directory contains Jupiter notebooks for various stages of the solution bui
 
 ### [_reports_](reports)
 
-  In this directory you can find progress reports on solution building.
+In this directory you can find progress reports on solution building.
 
 * [Report1.pdf](reports/Report1.pdf)
 * [Report2.pdf](reports/Report2.pdf)
@@ -72,9 +91,24 @@ This directory contains python script [represent_labels.py](src/scripts/represen
 
 The result of this script can be found in the [**Dataset section**](#dataset)
 
+## Prerequisites
+
+```py
+pip install ultralytics
+pip install roboflow
+```
+
+## How to use
+
+1. You can follow [**sample-usage notebook**](notebooks/sample_usage_trained_YOLOv8.ipynb)
+    1. Instantiate ```ultralytics.YOLO('results/weights/best.pt')``` **model**
+    1. Use model(image_url) to make a simple inference on an **image**
+    1. Use CLI command ```!yolo detect predict model=best.pt source='test.mp4'conf=0.715``` to make an inference on other sources such as **video**
+
 ## Project deployment
 
-Follow our telegram bot's [repository](https://github.com/system205/GroceryObjectDetectionTelegramBot). Check the instructions there. In short, you need to run docker compose file with ```docker-compose up``` command
+Follow our telegram bot's [repository](https://github.com/system205/GroceryObjectDetectionTelegramBot). Check the instructions there. In short, you need to run docker compose file with 
 
-
-
+```py
+docker-compose up
+``` 
