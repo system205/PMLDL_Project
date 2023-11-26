@@ -12,9 +12,9 @@ def represent_labels(rows, columns, path):
         axarr[i // columns, i % columns].imshow(labels[i // columns][i % columns])
         # Add row label as title
         if i % columns == 0:
-            axarr[i // columns, i % columns].set_title(label_names[i // 3], fontsize=20)
+            axarr[i // columns, i % columns].set_title(label_names[i // 3], fontsize=10)
         axarr[i // columns, i % columns].axis('off')  # Remove the axes
-    plt.savefig("labels.png", dpi=500)
+    plt.savefig("labels.png", dpi=500, bbox_inches='tight', pad_inches=0)
 
 
 # def get_label_photos(label, col, path):
