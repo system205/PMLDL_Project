@@ -16,6 +16,7 @@
   * [F1/Recall/Precision](#visuals)
   * [Training metrics](#training-and-validation-results)
   * [Predictions example](#predictions)
+* [Prerequisites](#rerequisites)
 * [How to use](#how-to-use)
 * [Deployment](#project-deployment)
 
